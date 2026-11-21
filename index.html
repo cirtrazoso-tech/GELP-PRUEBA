@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GELP | Programa de Preparación para el Examen de Grado - Medicina y Enfermería</title>
+  <meta name="description" content="Prepárate para tu Examen de Grado en Medicina o Enfermería con Grupo Médico de Enseñanza – La Paz (GELP). Plataforma virtual, simulacros presenciales y acompañamiento profesional en toda Bolivia.">
+  <meta name="keywords" content="GELP, Examen de Grado, Medicina, Enfermería, La Paz, Bolivia, Preparación médica, Simulacros clínicos">
+  <meta name="author" content="Grupo Médico de Enseñanza – La Paz (GELP)">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Programa de Preparación para el Examen de Grado | GELP">
+  <meta property="og:description" content="Tu examen de grado merece una preparación a la altura. Formación académica, simulacros de evaluación y acompañamiento profesional.">
+  <meta property="og:image" content="IMG/portada-curso.jpg">
+  <meta property="og:locale" content="es_BO">
+
+  <!-- Tipografía Institucional: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS (Utilidades base) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ==========================================================================
+       ESTILOS PERSONALIZADOS Y SISTEMA DE DISEÑO (Equivalente a style.css)
+       ========================================================================== -->
+  <style>
+    :root {
+      /* Paleta Corporativa Institucional GELP */
+      --gelp-navy-deep: #071936;      /* Azul marino profundo (fondos principales de jerarquía) */
+      --gelp-navy: #0B2545;           /* Azul institucional oscuro */
+      --gelp-blue-inst: #134074;      /* Azul institucional base */
+      --gelp-blue-mid: #1D63B8;       /* Azul medio (botones, acentos, destacados) */
+      --gelp-blue-bright: #2B82E6;    /* Acento luminoso sutil */
+      --gelp-blue-soft: #b0bdcc;      /* Fondo suave azulado */
+      --gelp-white-warm: #FAFBFD;     /* Blanco cálido limpio */
+      --gelp-gray-light: #F1F5F9;     /* Gris claro equilibrado */
+      --gelp-gray-border: #E2E8F0;    /* Borde sutil */
+      --gelp-gray-dark: #475569;      /* Gris oscuro para textos secundarios */
+      --gelp-text-main: #0F172A;      /* Texto principal de alto contraste */
+      --whatsapp-green: #25D366;      /* Verde oficial WhatsApp */
+      --whatsapp-dark: #1EBE5D;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--gelp-white-warm);
+      color: var(--gelp-text-main);
+      overflow-x: hidden;
+      width: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Compensación para barra inferior fija en móviles */
+    @media (max-width: 767px) {
+      body {
+        padding-bottom: 72px;
+      }
+    }
+
+    /* Fondos y Degradados Institucionales */
+    .bg-gelp-hero {
+      background: linear-gradient(135deg, var(--gelp-navy-deep) 0%, var(--gelp-navy) 55%, var(--gelp-blue-inst) 100%);
+    }
+
+    .bg-gelp-navy-gradient {
+      background: linear-gradient(160deg, var(--gelp-navy-deep) 0%, #0E2E5C 100%);
+    }
+
+    .bg-gelp-warm {
+      background-color: var(--gelp-white-warm);
+    }
+
+    .bg-gelp-light {
+      background-color: var(--gelp-gray-light);
+    }
+
+/* Fondo médico completo con degradado azul y cruces */
+.medical-grid-pattern {
+  background-image: 
+    url("IMG/cruses.png"),
+    linear-gradient(135deg, var(--gelp-navy-deep) 100%, var(--gelp-navy) 55%, var(--gelp-blue-inst) 100%);
+  background-repeat: repeat, no-repeat;
+  background-size: contain, cover;
+  background-position: center center, center center;
+}
+
+    /* Glassmorphism Moderado */
+    .glass-header {
+      background: rgba(7, 25, 54, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card-dark {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .glass-card-light {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--gelp-gray-border);
+      box-shadow: 0 10px 30px -10px rgba(11, 37, 69, 0.08);
+    }
+
+    /* Botones Comerciales Premium */
+    .btn-primary-blue {
+      background: linear-gradient(135deg, var(--gelp-blue-mid) 0%, var(--gelp-blue-bright) 100%);
+      color: #ffffff;
+      font-weight: 700;
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+      box-shadow: 0 8px 20px -4px rgba(29, 99, 184, 0.45);
+    }
+
+    .btn-primary-blue:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -4px rgba(43, 130, 230, 0.55);
+    }
+
+    .btn-primary-blue:active {
+      transform: translateY(0);
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #1E9E5A 0%, #25B869 100%);
+      color: #ffffff;
+      font-weight: 700;
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+      box-shadow: 0 8px 20px -4px rgba(30, 158, 90, 0.4);
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -4px rgba(37, 184, 105, 0.5);
+    }
+
+    .btn-outline-light {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      font-weight: 600;
+      transition: all 0.25s ease;
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Tarjeta Estrella (Paquete 3 Integral) */
+    .pricing-card-featured {
+      background: linear-gradient(165deg, #071936 0%, #0E3163 60%, #134074 100%);
+      border: 2px solid rgba(43, 130, 230, 0.75);
+      box-shadow: 0 24px 48px -12px rgba(7, 25, 54, 0.45), 0 0 24px rgba(43, 130, 230, 0.25);
+      position: relative;
+    }
+
+    @media (min-width: 1024px) {
+      .pricing-card-featured {
+        transform: scale(1.04);
+        z-index: 10;
+      }
+      .pricing-card-featured:hover {
+        transform: scale(1.055) translateY(-4px);
+      }
+    }
+
+    .pricing-card-standard {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @media (min-width: 1024px) {
+      .pricing-card-standard:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 35px -12px rgba(11, 37, 69, 0.14);
+      }
+    }
+
+    /* Contenedores de Imágenes con Respaldo (Fallback) Elegante */
+    .img-slot {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0B2545 0%, #134074 100%);
+    }
+
+    .img-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .img-slot:hover img {
+      transform: scale(1.04);
+    }
+
+    .img-fallback-overlay {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      text-align: center;
+      background: linear-gradient(145deg, #0B2545 0%, #164882 100%);
+      color: rgba(255, 255, 255, 0.9);
+      border: 1px dashed rgba(255, 255, 255, 0.25);
+    }
+
+    .img-slot.is-fallback .img-fallback-overlay {
+      display: flex;
+    }
+
+    .img-slot.is-fallback img {
+      display: none;
+    }
+
+    /* Acordeón FAQ */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 320px;
+    }
+
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-chevron {
+      transition: transform 0.3s ease;
+    }
+
+    /* Animaciones de Entrada (Intersection Observer) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Animación sutil del indicador de scroll */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    .animate-float-slow {
+      animation: floatSlow 2.4s ease-in-out infinite;
+    }
+
+    /* Etiqueta flotante WhatsApp */
+    .wa-tooltip {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Respeto por preferencias de movimiento reducido */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- ==========================================================================
+       BARRA DE NAVEGACIÓN SUPERIOR (RESPONSIVE)
+       ========================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        
+        <!-- Logotipo Institucional GELP -->
+        <a href="#inicio" class="flex items-center gap-3 group focus:outline-none" aria-label="Inicio GELP">
+          <div class="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-white/100 border border-white/20 flex items-center justify-center overflow-hidden p-1 shadow-sm">
+            <img 
+              src="IMG/icono.png" 
+              alt="Logotipo GELP" 
+              class="w-full h-full object-contain"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <!-- Respaldo vectorial institucional si IMG/icono.png aún no está cargado -->
+            <div class="hidden w-full h-full items-center justify-center text-white font-extrabold text-xs tracking-tighter bg-blue-600 rounded-lg">
+              GELP
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-white font-extrabold text-base md:text-lg tracking-tight leading-none">GELP</span>
+            <span class="text-blue-200 text-[10px] md:text-xs font-medium tracking-wide mt-0.5">Exelencia Academica</span>
+          </div>
+        </a>
+
+        <!-- Navegación Escritorio -->
+        <nav class="hidden lg:flex items-center gap-7" aria-label="Navegación principal">
+          <a href="#programa" class="text-sm font-medium text-slate-200 hover:text-white transition-colors">¿Qué ofrecemos?</a>
+          <a href="#metodologia" class="text-sm font-medium text-slate-200 hover:text-white transition-colors">Metodología</a>
+          <a href="#modalidad" class="text-sm font-medium text-slate-200 hover:text-white transition-colors">Modalidad Bolivia</a>
+          <a href="#planes" class="text-sm font-medium text-slate-200 hover:text-white transition-colors">Planes y Precios</a>
+          <a href="#faq" class="text-sm font-medium text-slate-200 hover:text-white transition-colors">Preguntas</a>
+          <a href="#ubicacion" class="text-sm font-medium text-slate-200 hover:text-white transition-colors">Ubicación</a>
+        </nav>
+
+        <!-- Botón CTA Header + Botón Menú Móvil -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button 
+            type="button"
+            data-wa-message="Hola, estoy interesado/a en el Programa de Preparación para el Examen de Grado de GELP. Quisiera recibir información."
+            class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-whatsapp text-xs md:text-sm cursor-pointer"
+          >
+            <!-- Icono WhatsApp SVG -->
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.79 23.49l4.613-1.464A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.77 9.77 0 01-4.983-1.363l-.357-.212-3.702 1.175 1.196-3.606-.232-.37A9.773 9.773 0 012.182 12C2.182 6.586 6.586 2.182 12 2.182S21.818 6.586 21.818 12 17.414 21.818 12 21.818z"/></svg>
+            <span>Consultar por WhatsApp</span>
+          </button>
+
+          <!-- Botón Menú Hamburguesa Móvil -->
+          <button 
+            id="mobile-menu-btn"
+            type="button" 
+            class="lg:hidden p-2.5 rounded-xl text-white bg-white/10 hover:bg-white/20 focus:outline-none"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#071936] border-t border-white/10 px-4 pt-3 pb-5 space-y-2 shadow-2xl">
+      <a href="#programa" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-100 hover:bg-white/10">¿Qué te ofrecemos?</a>
+      <a href="#metodologia" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-100 hover:bg-white/10">Pilares de preparación</a>
+      <a href="#modalidad" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-100 hover:bg-white/10">Modalidad en toda Bolivia</a>
+      <a href="#planes" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-semibold text-blue-300 bg-blue-950/60">Planes y Precios</a>
+      <a href="#galeria" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-100 hover:bg-white/10">Galería Académica</a>
+      <a href="#faq" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-100 hover:bg-white/10">Preguntas Frecuentes</a>
+      <a href="#ubicacion" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-100 hover:bg-white/10">Ubicación y Contacto</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- ==========================================================================
+         SECCIÓN 1. HERO / PORTADA
+         ========================================================================== -->
+    <section class="relative bg-gelp-hero medical-grid-pattern pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+      <!-- Elementos decorativos orgánicos y geométricos sutiles -->
+      <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-500/15 blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 -left-24 w-80 h-80 rounded-full bg-sky-400/10 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Columna Izquierda: Propuesta de Valor y Conversión -->
+          <div class="lg:col-span-7 text-left space-y-6">
+            <!-- Distintivo Institucional -->
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full glass-card-dark text-blue-200 text-xs sm:text-sm font-semibold tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+              <span>GRUPO MÉDICO DE ENSEÑANZA – LA PAZ (GELP)</span>
+            </div>
+
+            <!-- Titular Principal -->
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-[52px] font-extrabold text-white leading-[1.15] tracking-tight">
+              TU EXAMEN DE GRADO MERECE UNA <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-blue-400">PREPARACIÓN A LA ALTURA.</span>
+            </h1>
+
+            <!-- Subtítulo -->
+            <p class="text-base sm:text-lg text-slate-200 font-normal leading-relaxed max-w-2xl">
+              Prepárate con un programa que integra formación académica, simulacros de evaluación y acompañamiento profesional.
+            </p>
+
+            <!-- 3 Puntos Destacados Clave -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+              <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl glass-card-dark">
+                <svg class="w-5 h-5 text-sky-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/>
+                </svg>
+                <span class="text-xs sm:text-sm font-semibold text-white">Medicina y Enfermería</span>
+              </div>
+
+              <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl glass-card-dark">
+                <svg class="w-5 h-5 text-sky-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                </svg>
+                <span class="text-xs sm:text-sm font-semibold text-white">Modalidad personalizada</span>
+              </div>
+
+              <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl glass-card-dark">
+                <svg class="w-5 h-5 text-sky-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                </svg>
+                <span class="text-xs sm:text-sm font-semibold text-white">Preparación en toda Bolivia</span>
+              </div>
+            </div>
+
+            <!-- Botones Principales de Acción -->
+            <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
+              <a 
+                href="#programa" 
+                class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl btn-primary-blue text-sm sm:text-base tracking-wide text-center"
+              >
+                <span>CONOCER EL PROGRAMA</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/>
+                </svg>
+              </a>
+
+              <button 
+                type="button"
+                data-wa-message="Hola, estoy interesado/a en el Programa de Preparación para el Examen de Grado de GELP. Quisiera recibir información."
+                class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl btn-whatsapp text-sm sm:text-base tracking-wide cursor-pointer"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.79 23.49l4.613-1.464A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.77 9.77 0 01-4.983-1.363l-.357-.212-3.702 1.175 1.196-3.606-.232-.37A9.773 9.773 0 012.182 12C2.182 6.586 6.586 2.182 12 2.182S21.818 6.586 21.818 12 17.414 21.818 12 21.818z"/></svg>
+                <span>CONSULTAR POR WHATSAPP</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Fotografía Real de Preparación Académica (IMG/portada-curso.jpg) -->
+          <div class="lg:col-span-5">
+            <div class="relative rounded-3xl p-2 glass-card-dark shadow-2xl">
+              <div class="img-slot rounded-2xl aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/4]" data-img-slot>
+                <img 
+                  src="IMG/portada-curso.jpg" 
+                  alt="Estudiantes de Medicina y Enfermería en preparación académica GELP" 
+                  loading="eager"
+                >
+                <!-- Espacio preparado con respaldo elegante si la imagen aún no existe en IMG/ -->
+                <div class="img-fallback-overlay">
+                  <div class="w-16 h-16 rounded-2xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center mb-3">
+                    <svg class="w-8 h-8 text-sky-300" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+                    </svg>
+                  </div>
+                  <p class="text-sm font-bold text-white">Preparación Académica GELP</p>
+                  <p class="text-xs text-blue-200 mt-1 max-w-xs">Espacio listo para fotografía real: <code class="bg-black/30 px-1.5 py-0.5 rounded">IMG/portada-curso.jpg</code></p>
+                </div>
+              </div>
+
+              <!-- Tarjeta Flotante Institucional sobre la Portada -->
+              <div class="mt-3 sm:mt-0 sm:absolute sm:-bottom-5 sm:-left-5 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 flex items-center gap-3.5 max-w-xs">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center shrink-0">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs font-extrabold text-slate-900">Enfoque Clínico y Práctico</p>
+                  <p class="text-[11px] font-medium text-slate-600 mt-0.5">Simulacros y asesoría por médicos especialistas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Indicador Visual para Desplazarse hacia Abajo -->
+        <div class="mt-12 md:mt-16 flex justify-center">
+          <a href="#identificacion" class="inline-flex flex-col items-center gap-1.5 text-blue-200 hover:text-white transition-colors group" aria-label="Desplazarse hacia abajo">
+            <span class="text-xs font-semibold uppercase tracking-widest">Descubre el programa</span>
+            <span class="w-8 h-8 rounded-full border border-white/25 flex items-center justify-center animate-float-slow group-hover:border-white">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 2. IDENTIFICACIÓN DEL PÚBLICO
+         ========================================================================== -->
+    <section id="identificacion" class="py-16 md:py-24 bg-gelp-warm relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-blue-800 font-bold text-xs uppercase tracking-wider mb-3">
+            Etapa Decisiva de tu Carrera
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B2545] tracking-tight leading-tight">
+            ¿ESTÁS CULMINANDO MEDICINA O ENFERMERÍA?
+          </h2>
+          <p class="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
+            Sabemos que el examen de grado representa una etapa importante en tu formación profesional. Por eso, en GELP hemos desarrollado un programa que te permite reforzar tus conocimientos, practicar situaciones de evaluación y recibir orientación durante tu preparación.
+          </p>
+        </div>
+
+        <!-- Tres Ideas Destacadas -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          
+          <!-- Idea 1 -->
+          <div class="glass-card-light rounded-2xl p-7 text-center reveal hover:border-blue-300 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-[#0B2545] to-[#1D63B8] text-white flex items-center justify-center shadow-md mb-5">
+              <!-- Icono Libro / Conocimiento Médico -->
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-[#0B2545]">Refuerza tus conocimientos</h3>
+            <p class="mt-2.5 text-sm text-[#475569] leading-relaxed">
+              Consolida los temas esenciales y criterios clínicos evaluados con mayor frecuencia en el examen de grado.
+            </p>
+          </div>
+
+          <!-- Idea 2 -->
+          <div class="glass-card-light rounded-2xl p-7 text-center reveal hover:border-blue-300 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-[#0B2545] to-[#1D63B8] text-white flex items-center justify-center shadow-md mb-5">
+              <!-- Icono Evaluación / Estetoscopio-Checklist -->
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-[#0B2545]">Familiarízate con la evaluación</h3>
+            <p class="mt-2.5 text-sm text-[#475569] leading-relaxed">
+              Entrena la defensa de casos clínicos y la resolución de preguntas reales antes del día de tu tribunal.
+            </p>
+          </div>
+
+          <!-- Idea 3 -->
+          <div class="glass-card-light rounded-2xl p-7 text-center reveal hover:border-blue-300 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-[#0B2545] to-[#1D63B8] text-white flex items-center justify-center shadow-md mb-5">
+              <!-- Icono Acompañamiento Profesional -->
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-[#0B2545]">Prepárate con acompañamiento</h3>
+            <p class="mt-2.5 text-sm text-[#475569] leading-relaxed">
+              No estudies en soledad: cuenta con la guía directa de médicos especialistas para despejar tus dudas.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 3. ¿QUÉ TE OFRECEMOS?
+         ========================================================================== -->
+    <section id="programa" class="py-16 md:py-24 bg-gelp-light border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-blue-900 font-bold text-xs uppercase tracking-wider mb-3">
+            Estructura del Programa
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B2545] tracking-tight">
+            ¿QUÉ TE OFRECEMOS?
+          </h2>
+          <p class="mt-3 text-base text-[#475569]">
+            Cuatro componentes diseñados estratégicamente para cubrir cada dimensión académica y práctica de tu examen de grado.
+          </p>
+        </div>
+
+        <!-- Cuadrícula de 4 Tarjetas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-12">
+          
+          <!-- Tarjeta 01 -->
+          <article class="glass-card-light rounded-3xl overflow-hidden flex flex-col reveal">
+            <div class="img-slot h-44 sm:h-48" data-img-slot>
+              <img src="IMG/plataforma.jpg" alt="Plataforma Virtual de Preparación GELP" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"/>
+                </svg>
+                <span class="text-xs font-semibold">IMG/plataforma.jpg</span>
+              </div>
+              <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-lg bg-[#071936]/90 text-white font-extrabold text-xs tracking-wider backdrop-blur-sm">
+                01
+              </span>
+            </div>
+            <div class="p-6 sm:p-7 flex-1 flex flex-col">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#1D63B8] flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-[#0B2545] leading-snug">
+                  PLATAFORMA VIRTUAL DE PREPARACIÓN
+                </h3>
+              </div>
+              <p class="text-sm text-[#475569] mb-4">
+                Estudia a tu propio ritmo con clases estructuradas y enfocadas en los puntos clave de evaluación.
+              </p>
+              <ul class="space-y-2.5 text-sm text-slate-700 font-medium mt-auto">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Acceso exclusivo durante un mes.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Clases grabadas dictadas por médicos especialistas.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Desarrollo de los temas de mayor importancia para el examen.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Contenido organizado para facilitar tu aprendizaje.</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Tarjeta 02 -->
+          <article class="glass-card-light rounded-3xl overflow-hidden flex flex-col reveal">
+            <div class="img-slot h-44 sm:h-48" data-img-slot>
+              <img src="IMG/biblioteca.jpg" alt="Biblioteca Académica Digital GELP" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                </svg>
+                <span class="text-xs font-semibold">IMG/biblioteca.jpg</span>
+              </div>
+              <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-lg bg-[#071936]/90 text-white font-extrabold text-xs tracking-wider backdrop-blur-sm">
+                02
+              </span>
+            </div>
+            <div class="p-6 sm:p-7 flex-1 flex flex-col">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#1D63B8] flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-[#0B2545] leading-snug">
+                  BIBLIOTECA ACADÉMICA DIGITAL
+                </h3>
+              </div>
+              <p class="text-sm text-[#475569] mb-4">
+                Material bibliográfico seleccionado y sintetizado para optimizar tus horas de repaso teórico.
+              </p>
+              <ul class="space-y-2.5 text-sm text-slate-700 font-medium mt-auto">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Libros y resúmenes especializados.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Guías de estudio elaboradas por profesionales.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Manuales de preparación.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Bancos de preguntas y preguntas tipo examen de grado.</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Tarjeta 03 -->
+          <article class="glass-card-light rounded-3xl overflow-hidden flex flex-col reveal">
+            <div class="img-slot h-44 sm:h-48" data-img-slot>
+              <img src="IMG/simulacros.jpg" alt="Simulacros Presenciales de Examen de Grado GELP" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+                </svg>
+                <span class="text-xs font-semibold">IMG/simulacros.jpg</span>
+              </div>
+              <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-lg bg-[#071936]/90 text-white font-extrabold text-xs tracking-wider backdrop-blur-sm">
+                03
+              </span>
+            </div>
+            <div class="p-6 sm:p-7 flex-1 flex flex-col">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#1D63B8] flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-[#0B2545] leading-snug">
+                  SIMULACROS PRESENCIALES
+                </h3>
+              </div>
+              <p class="text-sm text-[#475569] mb-4">
+                Vive la experiencia real de evaluación frente a profesionales para fortalecer tu seguridad y criterio clínico.
+              </p>
+              <ul class="space-y-2.5 text-sm text-slate-700 font-medium mt-auto">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Simulaciones de evaluación en nuestras instalaciones.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Práctica de exposición y presentación de casos clínicos.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Evaluación de conocimientos y desempeño.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Corrección y retroalimentación para mejorar tu preparación.</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Tarjeta 04 -->
+          <article class="glass-card-light rounded-3xl overflow-hidden flex flex-col reveal">
+            <div class="img-slot h-44 sm:h-48" data-img-slot>
+              <img src="IMG/acompanamiento.jpg" alt="Acompañamiento Académico GELP" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/>
+                </svg>
+                <span class="text-xs font-semibold">IMG/acompanamiento.jpg</span>
+              </div>
+              <span class="absolute top-3.5 left-3.5 px-3 py-1 rounded-lg bg-[#071936]/90 text-white font-extrabold text-xs tracking-wider backdrop-blur-sm">
+                04
+              </span>
+            </div>
+            <div class="p-6 sm:p-7 flex-1 flex flex-col">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 text-[#1D63B8] flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
+                  </svg>
+                </div>
+                <h3 class="text-lg sm:text-xl font-extrabold text-[#0B2545] leading-snug">
+                  ACOMPAÑAMIENTO ACADÉMICO
+                </h3>
+              </div>
+              <p class="text-sm text-[#475569] mb-4">
+                Respaldo directo de nuestro equipo médico docente para resolver inquietudes durante todo tu proceso.
+              </p>
+              <ul class="space-y-2.5 text-sm text-slate-700 font-medium mt-auto">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Grupo exclusivo de WhatsApp.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Resolución de dudas por parte de nuestros doctores.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Orientación durante tu preparación.</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 4. ¿QUÉ NOS HACE DIFERENTES? (3 PILARES CONECTADOS)
+         ========================================================================== -->
+    <section id="metodologia" class="py-16 md:py-24 bg-gelp-navy-gradient medical-grid-pattern text-white relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full glass-card-dark text-sky-300 font-bold text-xs uppercase tracking-wider mb-3">
+            Metodología Integral GELP
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            NO SE TRATA SOLAMENTE DE ESTUDIAR. SE TRATA DE PREPARARTE INTEGRALMENTE.
+          </h2>
+        </div>
+
+        <!-- Composición de 3 Elementos Conectados entre sí -->
+        <div class="relative mt-14">
+          <!-- Línea conectora horizontal en escritorio -->
+          <div class="hidden md:block absolute top-14 left-[16%] right-[16%] h-0.5 bg-gradient-to-r from-sky-400/30 via-sky-400 to-sky-400/30 z-0"></div>
+          <!-- Línea conectora vertical en móvil -->
+          <div class="md:hidden absolute top-12 bottom-12 left-1/2 -translate-x-1/2 w-0.5 bg-gradient-to-b from-sky-400/30 via-sky-400 to-sky-400/30 z-0"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+            
+            <!-- Pilar 1: CONOCIMIENTO -->
+            <div class="glass-card-dark rounded-3xl p-7 text-center flex flex-col items-center reveal bg-[#092042]/90">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#1D63B8] to-[#2B82E6] text-white flex items-center justify-center shadow-lg ring-4 ring-[#071936] mb-5">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-sky-300 mb-1">Pilar 01</span>
+              <h3 class="text-xl font-extrabold text-white tracking-wide">CONOCIMIENTO</h3>
+              <p class="mt-3 text-sm text-slate-200 leading-relaxed">
+                Formación académica mediante clases y material especializado.
+              </p>
+            </div>
+
+            <!-- Pilar 2: PRÁCTICA -->
+            <div class="glass-card-dark rounded-3xl p-7 text-center flex flex-col items-center reveal bg-[#092042]/90">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#1D63B8] to-[#2B82E6] text-white flex items-center justify-center shadow-lg ring-4 ring-[#071936] mb-5">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-sky-300 mb-1">Pilar 02</span>
+              <h3 class="text-xl font-extrabold text-white tracking-wide">PRÁCTICA</h3>
+              <p class="mt-3 text-sm text-slate-200 leading-relaxed">
+                Simulacros de evaluación para familiarizarte con la dinámica de un examen de grado.
+              </p>
+            </div>
+
+            <!-- Pilar 3: ACOMPAÑAMIENTO -->
+            <div class="glass-card-dark rounded-3xl p-7 text-center flex flex-col items-center reveal bg-[#092042]/90">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#1D63B8] to-[#2B82E6] text-white flex items-center justify-center shadow-lg ring-4 ring-[#071936] mb-5">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-sky-300 mb-1">Pilar 03</span>
+              <h3 class="text-xl font-extrabold text-white tracking-wide">ACOMPAÑAMIENTO</h3>
+              <p class="mt-3 text-sm text-slate-200 leading-relaxed">
+                Orientación y apoyo para resolver tus dudas durante el proceso.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 5. MODALIDAD DE PREPARACIÓN (TODA BOLIVIA)
+         ========================================================================== -->
+    <section id="modalidad" class="py-16 md:py-24 bg-gelp-warm">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-blue-800 font-bold text-xs uppercase tracking-wider mb-3">
+            Cobertura Nacional
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B2545] tracking-tight">
+            PREPARACIÓN EN TODA BOLIVIA
+          </h2>
+          <p class="mt-3 text-base text-[#475569]">
+            Coordinación personalizada adaptada a tu ciudad, carrera y disponibilidad académica.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mt-12">
+          
+          <!-- Modalidad La Paz -->
+          <div class="glass-card-light rounded-3xl p-7 sm:p-8 border-t-4 border-t-[#0B2545] reveal">
+            <div class="flex items-center gap-3.5 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-[#0B2545] text-white flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-[#1D63B8] uppercase tracking-wider">Sede Principal</span>
+                <h3 class="text-lg sm:text-xl font-extrabold text-[#0B2545]">LA PAZ – MODALIDAD PRESENCIAL</h3>
+              </div>
+            </div>
+            <p class="text-sm sm:text-base text-[#475569] leading-relaxed">
+              Los simulacros se realizan presencialmente en las instalaciones correspondientes, previa coordinación individual con el estudiante.
+            </p>
+          </div>
+
+          <!-- Modalidad Otros Departamentos -->
+          <div class="glass-card-light rounded-3xl p-7 sm:p-8 border-t-4 border-t-[#1D63B8] reveal">
+            <div class="flex items-center gap-3.5 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-[#1D63B8] text-white flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+                </svg>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-[#1D63B8] uppercase tracking-wider">Alcance Nacional</span>
+                <h3 class="text-lg sm:text-xl font-extrabold text-[#0B2545]">OTROS DEPARTAMENTOS – MODALIDAD VIRTUAL</h3>
+              </div>
+            </div>
+            <p class="text-sm sm:text-base text-[#475569] leading-relaxed">
+              Los estudiantes de otros departamentos pueden consultar y coordinar su preparación mediante modalidad virtual, incluyendo la alternativa de simulación virtual según la coordinación académica.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Botón de Consulta de Modalidad -->
+        <div class="mt-10 text-center reveal">
+          <button 
+            type="button"
+            data-wa-message="Hola, quisiera información sobre la modalidad del Programa de Preparación para el Examen de Grado. Soy de [CIUDAD], departamento de [DEPARTAMENTO] y estudio [CARRERA]."
+            class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl btn-primary-blue text-sm sm:text-base cursor-pointer"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/>
+            </svg>
+            <span>CONSULTAR MI MODALIDAD</span>
+          </button>
+          <p class="mt-2.5 text-xs text-slate-500">
+            Al abrir WhatsApp podrás completar tu ciudad, departamento y carrera para una atención personalizada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 6. PLANES Y PRECIOS (SECCIÓN COMERCIAL PRINCIPAL)
+         ========================================================================== -->
+    <section id="planes" class="py-16 md:py-24 bg-gelp-light border-t border-slate-200/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-blue-900 font-bold text-xs uppercase tracking-wider mb-3">
+            Inversión Académica
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B2545] tracking-tight">
+            ELIGE TU PLAN DE PREPARACIÓN
+          </h2>
+          <p class="mt-3 text-base text-[#475569]">
+            Selecciona el paquete que mejor se adapte a tus objetivos. Nuestro programa integral incluye preparación teórica, biblioteca, acompañamiento y simulacros.
+          </p>
+        </div>
+
+        <!-- Contenedor de 3 Tarjetas: En móviles apiladas 1 -> 2 -> 3 (Integral al final destacado) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mt-14">
+          
+          <!-- PAQUETE 1 – PREPARACIÓN DIGITAL (Editable comercialmente) -->
+          <div class="pricing-card-standard glass-card-light rounded-3xl p-7 sm:p-8 flex flex-col justify-between reveal">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-[#1D63B8] bg-blue-50 px-3 py-1 rounded-full">
+                  Paquete 1
+                </span>
+                <span class="text-xs font-semibold text-slate-500">Estudio Autónomo</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-[#0B2545]">PREPARACIÓN DIGITAL</h3>
+              
+              <!-- Precio Paquete 1 -->
+              <div class="mt-5 pb-5 border-b border-slate-200">
+                <div class="flex items-baseline gap-1.5">
+                  <span class="text-lg font-bold text-slate-500">Bs</span>
+                  <span class="text-4xl font-extrabold text-[#0B2545]">490</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-1">Pago único · Acceso por 1 mes</p>
+              </div>
+
+              <!-- Lista de Beneficios Paquete 1 -->
+              <ul class="mt-6 space-y-3.5 text-sm text-slate-700 font-medium">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Acceso a la plataforma virtual durante un mes.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Clases grabadas por médicos especialistas.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Desarrollo de temas fundamentales para el examen.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Contenido organizado para el estudio.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4">
+              <button 
+                type="button"
+                data-wa-message="Hola, estoy interesado/a en el Paquete 1 – Preparación Digital de GELP. Quisiera información para inscribirme."
+                class="w-full py-3.5 px-5 rounded-xl border-2 border-[#0B2545] text-[#0B2545] hover:bg-[#0B2545] hover:text-white font-bold text-sm transition-colors cursor-pointer"
+              >
+                ELEGIR PAQUETE DIGITAL
+              </button>
+            </div>
+          </div>
+
+          <!-- PAQUETE 2 – PREPARACIÓN GUIADA (Editable comercialmente) -->
+          <div class="pricing-card-standard glass-card-light rounded-3xl p-7 sm:p-8 flex flex-col justify-between reveal">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-[#1D63B8] bg-blue-50 px-3 py-1 rounded-full">
+                  Paquete 2
+                </span>
+                <span class="text-xs font-semibold text-slate-500">Con Tutoría Médica</span>
+              </div>
+              <h3 class="text-xl font-extrabold text-[#0B2545]">PREPARACIÓN GUIADA</h3>
+              
+              <!-- Precio Paquete 2 -->
+              <div class="mt-5 pb-5 border-b border-slate-200">
+                <div class="flex items-baseline gap-1.5">
+                  <span class="text-lg font-bold text-slate-500">Bs</span>
+                  <span class="text-4xl font-extrabold text-[#0B2545]">650</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-1">Pago único · Incluye grupo de asesoría</p>
+              </div>
+
+              <!-- Lista de Beneficios Paquete 2 -->
+              <ul class="mt-6 space-y-3.5 text-sm text-slate-700 font-medium">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span class="font-bold text-[#0B2545]">Todos los beneficios del Paquete 1.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Acceso al grupo exclusivo de WhatsApp.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Posibilidad de realizar preguntas.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Resolución de dudas por parte de los doctores.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-[#1D63B8] shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Orientación durante la preparación.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4">
+              <button 
+                type="button"
+                data-wa-message="Hola, estoy interesado/a en el Paquete 2 – Preparación Guiada de GELP. Quisiera información para inscribirme."
+                class="w-full py-3.5 px-5 rounded-xl bg-[#0B2545] hover:bg-[#134074] text-white font-bold text-sm transition-colors cursor-pointer"
+              >
+                ELEGIR PAQUETE GUIADO
+              </button>
+            </div>
+          </div>
+
+          <!-- PAQUETE 3 – PREPARACIÓN INTEGRAL (PRODUCTO ESTRELLA) -->
+          <div id="paquete-estrella" class="pricing-card-featured rounded-3xl p-7 sm:p-8 text-white flex flex-col justify-between reveal">
+            <!-- Etiqueta Superior RECOMENDADO -->
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+              <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#1D63B8] to-[#2B82E6] text-white font-extrabold text-xs uppercase tracking-widest shadow-lg border border-sky-300/40">
+                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                RECOMENDADO
+              </span>
+            </div>
+
+            <div class="pt-2">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-extrabold uppercase tracking-wider text-sky-300 bg-white/10 px-3 py-1 rounded-full">
+                  Paquete 3 · Completo
+                </span>
+                <!-- Insignia de Descuento Exacto 20% -->
+                <span class="text-xs font-extrabold uppercase tracking-wide bg-sky-400/20 text-sky-200 border border-sky-300/40 px-2.5 py-1 rounded-lg">
+                  20% DE DESCUENTO
+                </span>
+              </div>
+
+              <h3 class="text-2xl font-extrabold text-white">PREPARACIÓN INTEGRAL</h3>
+              
+              <!-- Bloque de Precios con Contador Animado -->
+              <div class="mt-5 pb-5 border-b border-white/15">
+                <div class="flex items-center gap-2 text-sm text-blue-200">
+                  <span>Precio de referencia:</span>
+                  <span class="line-through font-semibold text-blue-300/80">Bs 987,50</span>
+                </div>
+                <div class="flex items-baseline gap-2 mt-1">
+                  <span class="text-xl font-bold text-sky-300">Bs</span>
+                  <span 
+                    id="featured-price-counter" 
+                    data-target="790" 
+                    class="text-5xl font-extrabold text-white tracking-tight"
+                  >790</span>
+                  <span class="text-xs font-semibold text-sky-200 ml-1">Precio promocional</span>
+                </div>
+              </div>
+
+              <!-- Lista Completa de Beneficios del Paquete Integral -->
+              <ul class="mt-6 space-y-2.5 text-sm text-slate-100 font-medium">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Acceso a la plataforma virtual durante un mes.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Clases grabadas por médicos especialistas.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Biblioteca académica digital.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Libros y resúmenes especializados.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Guías y manuales de preparación.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Bancos de preguntas y preguntas tipo examen de grado.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Grupo exclusivo de WhatsApp.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Resolución de dudas por doctores.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Simulacros presenciales en La Paz, previa coordinación.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Evaluación y presentación de casos clínicos.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-5 h-5 text-sky-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  <span>Corrección y retroalimentación.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Botón Principal Paquete Integral -->
+            <div class="mt-8 pt-4">
+              <button 
+                type="button"
+                data-wa-message="Hola, quiero inscribirme al Paquete 3 – Preparación Integral de GELP por Bs 790. Quisiera conocer los pasos para realizar mi inscripción."
+                class="w-full py-4 px-5 rounded-xl btn-primary-blue text-sm sm:text-base font-extrabold tracking-wide flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>QUIERO MI PREPARACIÓN INTEGRAL</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 7. GALERÍA FOTOGRÁFICA (ACTIVIDADES REALES GELP)
+         ========================================================================== -->
+    <section id="galeria" class="py-16 md:py-24 bg-gelp-warm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-blue-50 text-blue-800 font-bold text-xs uppercase tracking-wider mb-3">
+            Experiencia Académica
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B2545] tracking-tight">
+            FORMACIÓN QUE SE VIVE EN LA PRÁCTICA
+          </h2>
+          <p class="mt-3 text-base text-[#475569]">
+            Conoce nuestros espacios de entrenamiento clínico, simulacros de evaluación y sesiones académicas con especialistas. Haz clic en cualquier fotografía para ampliarla.
+          </p>
+        </div>
+
+        <!-- Cuadrícula Adaptable de 6 Espacios Fotográficos -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-12">
+          
+          <!-- Foto 1 -->
+          <figure class="group cursor-pointer reveal" data-lightbox-src="IMG/estudiante-01.jpg" data-lightbox-caption="Estudiantes durante las prácticas clínicas en GELP">
+            <div class="img-slot rounded-2xl aspect-[4/3] shadow-md" data-img-slot>
+              <img src="IMG/estudiante-01.jpg" alt="Estudiantes durante las prácticas" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                <p class="text-xs font-bold">Estudiantes durante las prácticas</p>
+                <span class="text-[11px] text-blue-200 mt-0.5">IMG/estudiante-01.jpg</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#071936]/80 via-transparent to-transparent opacity-90 flex items-end p-4">
+                <span class="text-white text-xs sm:text-sm font-bold">Estudiantes durante las prácticas</span>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Foto 2 -->
+          <figure class="group cursor-pointer reveal" data-lightbox-src="IMG/instructor.jpg" data-lightbox-caption="Médicos especialistas impartiendo clases">
+            <div class="img-slot rounded-2xl aspect-[4/3] shadow-md" data-img-slot>
+              <img src="IMG/instructor.jpg" alt="Médicos especialistas impartiendo clases" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                <p class="text-xs font-bold">Médicos especialistas impartiendo clases</p>
+                <span class="text-[11px] text-blue-200 mt-0.5">IMG/instructor.jpg</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#071936]/80 via-transparent to-transparent opacity-90 flex items-end p-4">
+                <span class="text-white text-xs sm:text-sm font-bold">Médicos especialistas impartiendo clases</span>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Foto 3 -->
+          <figure class="group cursor-pointer reveal" data-lightbox-src="IMG/practica-01.jpg" data-lightbox-caption="Simulacros de evaluación académica">
+            <div class="img-slot rounded-2xl aspect-[4/3] shadow-md" data-img-slot>
+              <img src="IMG/practica-01.jpg" alt="Simulacros de evaluación" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                <p class="text-xs font-bold">Simulacros de evaluación</p>
+                <span class="text-[11px] text-blue-200 mt-0.5">IMG/practica-01.jpg</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#071936]/80 via-transparent to-transparent opacity-90 flex items-end p-4">
+                <span class="text-white text-xs sm:text-sm font-bold">Simulacros de evaluación</span>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Foto 4 -->
+          <figure class="group cursor-pointer reveal" data-lightbox-src="IMG/practica-02.jpg" data-lightbox-caption="Exposiciones y defensa de casos clínicos">
+            <div class="img-slot rounded-2xl aspect-[4/3] shadow-md" data-img-slot>
+              <img src="IMG/practica-02.jpg" alt="Exposiciones de casos clínicos" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                <p class="text-xs font-bold">Exposiciones de casos clínicos</p>
+                <span class="text-[11px] text-blue-200 mt-0.5">IMG/practica-02.jpg</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#071936]/80 via-transparent to-transparent opacity-90 flex items-end p-4">
+                <span class="text-white text-xs sm:text-sm font-bold">Exposiciones de casos clínicos</span>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Foto 5 -->
+          <figure class="group cursor-pointer reveal" data-lightbox-src="IMG/estudiante-02.jpg" data-lightbox-caption="Instalaciones y ambientes de estudio GELP">
+            <div class="img-slot rounded-2xl aspect-[4/3] shadow-md" data-img-slot>
+              <img src="IMG/estudiante-02.jpg" alt="Instalaciones GELP" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                <p class="text-xs font-bold">Instalaciones</p>
+                <span class="text-[11px] text-blue-200 mt-0.5">IMG/estudiante-02.jpg</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#071936]/80 via-transparent to-transparent opacity-90 flex items-end p-4">
+                <span class="text-white text-xs sm:text-sm font-bold">Instalaciones</span>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Foto 6 -->
+          <figure class="group cursor-pointer reveal" data-lightbox-src="IMG/simulacros.jpg" data-lightbox-caption="Actividades académicas y retroalimentación">
+            <div class="img-slot rounded-2xl aspect-[4/3] shadow-md" data-img-slot>
+              <img src="IMG/simulacros.jpg" alt="Actividades académicas GELP" loading="lazy">
+              <div class="img-fallback-overlay">
+                <svg class="w-8 h-8 text-sky-300 mb-1.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                <p class="text-xs font-bold">Actividades académicas</p>
+                <span class="text-[11px] text-blue-200 mt-0.5">IMG/simulacros.jpg</span>
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#071936]/80 via-transparent to-transparent opacity-90 flex items-end p-4">
+                <span class="text-white text-xs sm:text-sm font-bold">Actividades académicas</span>
+              </div>
+            </div>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 8. PREGUNTAS FRECUENTES (ACORDEÓN INTERACTIVO)
+         ========================================================================== -->
+    <section id="faq" class="py-16 md:py-24 bg-gelp-light border-t border-slate-200/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center reveal">
+          <span class="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-blue-900 font-bold text-xs uppercase tracking-wider mb-3">
+            Resuelve tus Dudas
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B2545] tracking-tight">
+            PREGUNTAS FRECUENTES
+          </h2>
+        </div>
+
+        <div class="mt-10 space-y-3.5" id="faq-accordion">
+          
+          <!-- Pregunta 1 -->
+          <div class="faq-item glass-card-light rounded-2xl overflow-hidden reveal">
+            <button type="button" class="faq-trigger w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0B2545] hover:bg-blue-50/40 transition-colors cursor-pointer" aria-expanded="false">
+              <span>1. ¿A quién está dirigido el programa?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#1D63B8] shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="pb-5 text-sm sm:text-base text-[#475569] leading-relaxed border-t border-slate-100 pt-3">
+                A estudiantes que están culminando las carreras de Medicina y Enfermería y se preparan para rendir su examen de grado.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pregunta 2 -->
+          <div class="faq-item glass-card-light rounded-2xl overflow-hidden reveal">
+            <button type="button" class="faq-trigger w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0B2545] hover:bg-blue-50/40 transition-colors cursor-pointer" aria-expanded="false">
+              <span>2. ¿Cuánto tiempo tengo acceso a la plataforma?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#1D63B8] shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="pb-5 text-sm sm:text-base text-[#475569] leading-relaxed border-t border-slate-100 pt-3">
+                El acceso a la plataforma virtual es exclusivo durante un mes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pregunta 3 -->
+          <div class="faq-item glass-card-light rounded-2xl overflow-hidden reveal">
+            <button type="button" class="faq-trigger w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0B2545] hover:bg-blue-50/40 transition-colors cursor-pointer" aria-expanded="false">
+              <span>3. ¿Los simulacros son presenciales?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#1D63B8] shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="pb-5 text-sm sm:text-base text-[#475569] leading-relaxed border-t border-slate-100 pt-3">
+                En La Paz se coordinan de manera presencial con cada estudiante. Para otros departamentos se puede consultar la modalidad virtual.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pregunta 4 -->
+          <div class="faq-item glass-card-light rounded-2xl overflow-hidden reveal">
+            <button type="button" class="faq-trigger w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0B2545] hover:bg-blue-50/40 transition-colors cursor-pointer" aria-expanded="false">
+              <span>4. ¿Puedo participar si vivo en otro departamento?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#1D63B8] shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="pb-5 text-sm sm:text-base text-[#475569] leading-relaxed border-t border-slate-100 pt-3">
+                Sí. GELP ofrece alternativas de preparación virtual para estudiantes de diferentes departamentos de Bolivia.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pregunta 5 -->
+          <div class="faq-item glass-card-light rounded-2xl overflow-hidden reveal">
+            <button type="button" class="faq-trigger w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0B2545] hover:bg-blue-50/40 transition-colors cursor-pointer" aria-expanded="false">
+              <span>5. ¿Cómo puedo inscribirme?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#1D63B8] shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="pb-5 text-sm sm:text-base text-[#475569] leading-relaxed border-t border-slate-100 pt-3">
+                Debes comunicarte con nosotros mediante WhatsApp. Nuestro equipo te proporcionará la información y coordinará los pasos para formalizar tu inscripción.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pregunta 6 -->
+          <div class="faq-item glass-card-light rounded-2xl overflow-hidden reveal">
+            <button type="button" class="faq-trigger w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0B2545] hover:bg-blue-50/40 transition-colors cursor-pointer" aria-expanded="false">
+              <span>6. ¿Cómo puedo conocer los precios y beneficios?</span>
+              <svg class="faq-chevron w-5 h-5 text-[#1D63B8] shrink-0" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="pb-5 text-sm sm:text-base text-[#475569] leading-relaxed border-t border-slate-100 pt-3">
+                Puedes revisar los tres paquetes en esta página y comunicarte con nuestro equipo si necesitas más información.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 9. CONTACTO Y UBICACIÓN
+         ========================================================================== -->
+    <section id="ubicacion" class="py-16 md:py-24 bg-gelp-warm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl bg-gelp-navy-gradient medical-grid-pattern text-white p-7 sm:p-10 lg:p-12 shadow-2xl overflow-hidden relative reveal">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
+            
+            <!-- Información de Contacto Institucional -->
+            <div class="lg:col-span-6 space-y-6">
+              <span class="inline-block px-3.5 py-1 rounded-full glass-card-dark text-sky-300 font-bold text-xs uppercase tracking-wider">
+                Contacto Directo
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                TU PREPARACIÓN MARCA LA DIFERENCIA. ESTAMOS CONTIGO EN EL CAMINO HACIA TU TÍTULO PROFESIONAL.
+              </h2>
+
+              <div class="space-y-4 pt-2">
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-xl glass-card-dark flex items-center justify-center shrink-0 text-sky-300 mt-0.5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-extrabold text-white text-sm sm:text-base">GRUPO MÉDICO DE ENSEÑANZA – LA PAZ (GELP)</p>
+                    <p class="text-sm text-blue-200 mt-0.5">Centro Integral de Salud OM2.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div class="w-10 h-10 rounded-xl glass-card-dark flex items-center justify-center shrink-0 text-sky-300 mt-0.5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-bold text-white text-sm sm:text-base">WhatsApp: +591 73545591</p>
+                    <p class="text-sm text-blue-200 mt-0.5">Atención: Lunes a viernes, de 09:00 a 19:00.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <button 
+                  type="button"
+                  data-wa-message="Hola, quisiera recibir información sobre el Programa de Preparación para el Examen de Grado de GELP."
+                  class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl btn-whatsapp text-sm sm:text-base cursor-pointer"
+                >
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.79 23.49l4.613-1.464A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.77 9.77 0 01-4.983-1.363l-.357-.212-3.702 1.175 1.196-3.606-.232-.37A9.773 9.773 0 012.182 12C2.182 6.586 6.586 2.182 12 2.182S21.818 6.586 21.818 12 17.414 21.818 12 21.818z"/></svg>
+                  <span>ESCRIBIR POR WHATSAPP</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Tarjeta Interactiva de Ubicación y Google Maps -->
+            <div class="lg:col-span-6">
+              <div class="glass-card-dark rounded-2xl p-5 sm:p-6 border border-white/15">
+                <div class="relative rounded-xl overflow-hidden bg-[#061329] border border-white/10">
+                  <!-- Mapa embebido de referencia La Paz - Centro Integral de Salud OM2 -->
+                  <iframe 
+                    title="Ubicación Centro Integral de Salud OM2 - GELP La Paz"
+                    src="https://maps.google.com/maps?q=Centro%20Integral%20de%20Salud%20OM2%20La%20Paz%20Bolivia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    class="w-full h-56 sm:h-64 border-0 opacity-90"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+
+                <div class="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div>
+                    <p class="text-sm font-bold text-white">Centro Integral de Salud OM2</p>
+                    <p class="text-xs text-blue-200">La Paz, Bolivia</p>
+                  </div>
+                  <a 
+                    href="https://maps.app.goo.gl/oQYdvmUouNxmqcJm8" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl btn-primary-blue text-xs sm:text-sm font-bold shrink-0"
+                  >
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                    </svg>
+                    <span>ABRIR EN GOOGLE MAPS</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       SECCIÓN 10. REDES SOCIALES Y FOOTER
+       ========================================================================== -->
+  <footer class="bg-[#051226] text-slate-300 border-t border-white/10 pt-14 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-white/10">
+        
+        <!-- Identidad GELP en Footer -->
+        <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center p-1.5 shrink-0">
+            <img 
+              src="IMG/icono.png" 
+              alt="Logotipo GELP" 
+              class="w-full h-full object-contain"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="hidden w-full h-full items-center justify-center text-white font-extrabold text-sm bg-blue-600 rounded-xl">
+              GELP
+            </div>
+          </div>
+          <div>
+            <p class="text-white font-extrabold text-lg tracking-tight">GRUPO MÉDICO DE ENSEÑANZA – LA PAZ (GELP)</p>
+            <p class="text-sm text-blue-200 mt-1 max-w-md">
+              "Tu preparación marca la diferencia. Estamos contigo en el camino hacia tu título profesional."
+            </p>
+          </div>
+        </div>
+
+        <!-- Enlaces Oficiales Redes Sociales -->
+        <div class="flex flex-col items-center md:items-end gap-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Síguenos en redes sociales</span>
+          <div class="flex items-center gap-3.5">
+            <!-- Instagram -->
+            <a 
+              href="https://www.instagram.com/grupomedlapaz/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Instagram oficial de GELP"
+              class="w-11 h-11 rounded-xl bg-white/10 hover:bg-[#1D63B8] text-white flex items-center justify-center transition-colors"
+            >
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+
+            <!-- Facebook -->
+            <a 
+              href="https://www.facebook.com/p/Grupo-M%C3%A9dico-De-Ense%C3%B1anza-La-Paz-GELP-100043559241246/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Facebook oficial de GELP"
+              class="w-11 h-11 rounded-xl bg-white/10 hover:bg-[#1D63B8] text-white flex items-center justify-center transition-colors"
+            >
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+            </a>
+
+            <!-- TikTok -->
+            <a 
+              href="https://www.tiktok.com/@grupomedlapaz" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="TikTok oficial de GELP"
+              class="w-11 h-11 rounded-xl bg-white/10 hover:bg-[#1D63B8] text-white flex items-center justify-center transition-colors"
+            >
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-2">
+        <p>&copy; <span id="current-year"></span> Grupo Médico de Enseñanza – La Paz (GELP). Todos los derechos reservados.</p>
+        <p>Programa de Preparación para el Examen de Grado · Bolivia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP (ESCRITORIO Y TABLET)
+       ========================================================================== -->
+  <div class="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-3">
+    <div class="wa-tooltip bg-white text-[#0B2545] px-4 py-2.5 rounded-xl shadow-xl border border-slate-200 text-xs font-bold flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+      <span>¿Tienes dudas? Escríbenos</span>
+    </div>
+    <button 
+      type="button"
+      data-wa-message="Hola, quisiera información sobre el Programa de Preparación para el Examen de Grado de GELP."
+      aria-label="Contactar por WhatsApp"
+      class="w-14 h-14 rounded-full btn-whatsapp flex items-center justify-center shadow-2xl cursor-pointer"
+    >
+      <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.79 23.49l4.613-1.464A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.77 9.77 0 01-4.983-1.363l-.357-.212-3.702 1.175 1.196-3.606-.232-.37A9.773 9.773 0 012.182 12C2.182 6.586 6.586 2.182 12 2.182S21.818 6.586 21.818 12 17.414 21.818 12 21.818z"/></svg>
+    </button>
+  </div>
+
+  <!-- ==========================================================================
+       BARRA INFERIOR FIJA PARA MÓVILES (EXPERIENCIA TÁCTIL ÓPTIMA)
+       ========================================================================== -->
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#071936]/95 backdrop-blur-md border-t border-white/15 px-3 py-2.5 shadow-2xl" aria-label="Navegación rápida móvil">
+    <div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+      <a 
+        href="#planes" 
+        class="flex items-center justify-center gap-2 py-3 px-3 rounded-xl btn-primary-blue text-xs font-extrabold tracking-wide text-center"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"/>
+        </svg>
+        <span>PLANES</span>
+      </a>
+
+      <button 
+        type="button"
+        data-wa-message="Hola, quisiera información sobre el Programa de Preparación para el Examen de Grado de GELP."
+        class="flex items-center justify-center gap-2 py-3 px-3 rounded-xl btn-whatsapp text-xs font-extrabold tracking-wide cursor-pointer"
+      >
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.79 23.49l4.613-1.464A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.77 9.77 0 01-4.983-1.363l-.357-.212-3.702 1.175 1.196-3.606-.232-.37A9.773 9.773 0 012.182 12C2.182 6.586 6.586 2.182 12 2.182S21.818 6.586 21.818 12 17.414 21.818 12 21.818z"/></svg>
+        <span>WHATSAPP</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       MODAL LIGHTBOX PARA AMPLIAR FOTOGRAFÍAS DE LA GALERÍA
+       ========================================================================== -->
+  <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden bg-[#051226]/92 backdrop-blur-md items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption">
+    <div class="relative max-w-4xl w-full bg-[#0B2545] rounded-3xl overflow-hidden border border-white/15 shadow-2xl">
+      <button 
+        id="lightbox-close" 
+        type="button" 
+        class="absolute top-3.5 right-3.5 z-10 w-10 h-10 rounded-full bg-black/50 hover:bg-black/75 text-white flex items-center justify-center cursor-pointer"
+        aria-label="Cerrar vista ampliada"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="lightbox-media-container" class="aspect-[16/10] bg-[#071936] flex items-center justify-center">
+        <img id="lightbox-img" src="" alt="" class="w-full h-full object-contain">
+        <div id="lightbox-fallback" class="hidden flex-col items-center justify-center p-8 text-center text-white">
+          <p class="text-base font-bold">Vista previa preparada para fotografía real</p>
+          <p id="lightbox-path" class="text-xs text-blue-200 mt-1"></p>
+        </div>
+      </div>
+      <div class="px-6 py-4 bg-[#071936] text-white flex items-center justify-between">
+        <p id="lightbox-caption" class="text-sm sm:text-base font-bold"></p>
+        <span class="text-xs text-blue-300 font-semibold">GELP · La Paz</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       LÓGICA JAVASCRIPT PURA (Equivalente a script.js)
+       ========================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ------------------------------------------------------------------------
+         1. CONFIGURACIÓN CENTRALIZADA DE WHATSAPP
+         ------------------------------------------------------------------------ */
+      const GELP_WHATSAPP_NUMBER = '59173545591';
+
+      /**
+       * Genera la URL oficial wa.me con codificación segura encodeURIComponent.
+       * @param {string} message - Mensaje personalizado según intención o paquete.
+       * @returns {string} Enlace listo para abrir WhatsApp en móvil o escritorio.
+       */
+      function buildWhatsAppUrl(message) {
+        const cleanMessage = (message || '').trim();
+        return `https://wa.me/${GELP_WHATSAPP_NUMBER}?text=${encodeURIComponent(cleanMessage)}`;
+      }
+
+      /**
+       * Vincula todos los botones con el atributo [data-wa-message] para abrir WhatsApp.
+       */
+      function initWhatsAppButtons() {
+        const waTriggers = document.querySelectorAll('[data-wa-message]');
+        waTriggers.forEach((btn) => {
+          btn.addEventListener('click', function () {
+            const msg = this.getAttribute('data-wa-message');
+            const targetUrl = buildWhatsAppUrl(msg);
+            window.open(targetUrl, '_blank', 'noopener,noreferrer');
+          });
+        });
+      }
+
+      /* ------------------------------------------------------------------------
+         2. GESTIÓN DE RESPALDOS ELEGANTE PARA IMÁGENES LOCALES (IMG/)
+         ------------------------------------------------------------------------ */
+      function initImageFallbacks() {
+        const slots = document.querySelectorAll('[data-img-slot]');
+        slots.forEach((slot) => {
+          const img = slot.querySelector('img');
+          if (!img) return;
+
+          const activateFallback = () => {
+            slot.classList.add('is-fallback');
+          };
+
+          img.addEventListener('error', activateFallback);
+
+          // Si la imagen ya falló antes de registrar el evento
+          if (img.complete && img.naturalWidth === 0) {
+            activateFallback();
+          }
+        });
+      }
+
+      /* ------------------------------------------------------------------------
+         3. MENÚ DE NAVEGACIÓN MÓVIL
+         ------------------------------------------------------------------------ */
+      function initMobileMenu() {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (!menuBtn || !mobileMenu) return;
+
+        menuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          mobileMenu.classList.toggle('hidden');
+          menuBtn.setAttribute('aria-expanded', String(isHidden));
+        });
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      /* ------------------------------------------------------------------------
+         4. ANIMACIONES AL DESPLAZARSE (INTERSECTION OBSERVER)
+         ------------------------------------------------------------------------ */
+      function initScrollReveal() {
+        const revealElements = document.querySelectorAll('.reveal');
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReduced || !('IntersectionObserver' in window)) {
+          revealElements.forEach((el) => el.classList.add('visible'));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+        );
+
+        revealElements.forEach((el) => observer.observe(el));
+      }
+
+      /* ------------------------------------------------------------------------
+         5. CONTADOR ANIMADO DE PRECIO PROMOCIONAL (BS 790)
+         ------------------------------------------------------------------------ */
+      function initPriceCounter() {
+        const counterEl = document.getElementById('featured-price-counter');
+        if (!counterEl) return;
+
+        const targetValue = parseInt(counterEl.getAttribute('data-target'), 10) || 790;
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let hasAnimated = false;
+
+        const animateValue = () => {
+          if (hasAnimated) return;
+          hasAnimated = true;
+
+          if (prefersReduced) {
+            counterEl.textContent = targetValue;
+            return;
+          }
+
+          const startValue = 987; // Inicia desde el precio de referencia redondeado
+          const duration = 1100;
+          const startTime = performance.now();
+
+          function step(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Curva easeOutQuart suave
+            const ease = 1 - Math.pow(1 - progress, 4);
+            const currentNumber = Math.round(startValue + (targetValue - startValue) * ease);
+            counterEl.textContent = currentNumber;
+
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              counterEl.textContent = targetValue;
+            }
+          }
+
+          requestAnimationFrame(step);
+        };
+
+        if (!('IntersectionObserver' in window)) {
+          animateValue();
+          return;
+        }
+
+        const priceObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateValue();
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.35 }
+        );
+
+        priceObserver.observe(counterEl);
+      }
+
+      /* ------------------------------------------------------------------------
+         6. ACORDEÓN DE PREGUNTAS FRECUENTES
+         ------------------------------------------------------------------------ */
+      function initFaqAccordion() {
+        const items = document.querySelectorAll('.faq-item');
+
+        items.forEach((item) => {
+          const trigger = item.querySelector('.faq-trigger');
+          if (!trigger) return;
+
+          trigger.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Cerrar los demás elementos abiertos para mantener limpieza visual
+            items.forEach((other) => {
+              other.classList.remove('active');
+              const otherBtn = other.querySelector('.faq-trigger');
+              if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isActive) {
+              item.classList.add('active');
+              trigger.setAttribute('aria-expanded', 'true');
+            }
+          });
+        });
+      }
+
+      /* ------------------------------------------------------------------------
+         7. GALERÍA INTERACTIVA CON AMPLIACIÓN (LIGHTBOX)
+         ------------------------------------------------------------------------ */
+      function initGalleryLightbox() {
+        const figures = document.querySelectorAll('[data-lightbox-src]');
+        const lightbox = document.getElementById('gallery-lightbox');
+        const closeBtn = document.getElementById('lightbox-close');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxFallback = document.getElementById('lightbox-fallback');
+        const lightboxPath = document.getElementById('lightbox-path');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        if (!lightbox || !closeBtn) return;
+
+        const closeModal = () => {
+          lightbox.classList.add('hidden');
+          lightbox.classList.remove('flex');
+          document.body.style.overflow = '';
+        };
+
+        figures.forEach((fig) => {
+          fig.addEventListener('click', () => {
+            const src = fig.getAttribute('data-lightbox-src');
+            const caption = fig.getAttribute('data-lightbox-caption') || '';
+            const slot = fig.querySelector('[data-img-slot]');
+            const isFallback = slot && slot.classList.contains('is-fallback');
+
+            lightboxCaption.textContent = caption;
+
+            if (isFallback) {
+              lightboxImg.classList.add('hidden');
+              lightboxFallback.classList.remove('hidden');
+              lightboxFallback.classList.add('flex');
+              lightboxPath.textContent = `Ruta configurada: ${src}`;
+            } else {
+              lightboxFallback.classList.add('hidden');
+              lightboxFallback.classList.remove('flex');
+              lightboxImg.classList.remove('hidden');
+              lightboxImg.src = src;
+              lightboxImg.alt = caption;
+            }
+
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+          });
+        });
+
+        closeBtn.addEventListener('click', closeModal);
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+            closeModal();
+          }
+        });
+      }
+
+      /* ------------------------------------------------------------------------
+         8. INICIALIZACIÓN GENERAL
+         ------------------------------------------------------------------------ */
+      document.addEventListener('DOMContentLoaded', () => {
+        const yearSpan = document.getElementById('current-year');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+        initWhatsAppButtons();
+        initImageFallbacks();
+        initMobileMenu();
+        initScrollReveal();
+        initPriceCounter();
+        initFaqAccordion();
+        initGalleryLightbox();
+      });
+    })();
+  </script>
+</body>
+</html>
